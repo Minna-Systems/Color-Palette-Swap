@@ -18,7 +18,7 @@ _METRICS = (
 
 def _page_html(primary: list[dict], accent: list[dict], n: dict[str, str]) -> str:
     p1, p2, p3 = (c["hex"] for c in primary)
-    on_p2, on_p3 = text_on(p2), text_on(p3)
+    on_p1, on_p2, on_p3 = text_on(p1), text_on(p2), text_on(p3)
     accents = accent or [{"name": "Accent", "hex": p2}]
 
     metrics = []
@@ -64,6 +64,7 @@ nav a[aria-current="page"] {{ color: {p3}; font-weight: 650; }}
   padding: 12px 20px; border-radius: 999px; border: 1.5px solid transparent; cursor: pointer;
 }}
 .btn-primary {{ background: {p2}; color: {on_p2}; }}
+.btn-brand {{ background: {p1}; color: {on_p1}; }}
 .btn-secondary {{ background: {n["card"]}; color: {p3}; border-color: {n["border"]}; }}
 .btn-on-dark {{ background: {n["card"]}; color: {p3}; }}
 .hero {{
@@ -156,7 +157,7 @@ footer.foot strong {{ color: {p1}; }}
         <li><a href="#">Clinicians</a></li>
       </ul>
     </nav>
-    <button type="button" class="btn btn-primary">Sign up</button>
+    <button type="button" class="btn btn-brand">Sign up</button>
   </div>
 </header>
 

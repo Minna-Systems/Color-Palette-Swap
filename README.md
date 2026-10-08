@@ -1,12 +1,21 @@
 # Color-Palette-Swap
 
-A **real HTML webpage** about pediatric diabetes (headings, paragraphs, nav, buttons, blockquote, lists, figure, aside, footer) with colors driven by the sidebar palette.
+Streamlit page for comparing Ketsu color palettes.
 
-## Run
+**Entry point:** `app.py`
+
+## Streamlit Cloud
+
+Main file: `app.py`  
+Dependencies: `requirements.txt`
+
+Cloud installs from `requirements.txt`. The local `.venv` folder is not part of the app.
+
+## Run locally
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-Pick a palette in the sidebar to recolor the page.

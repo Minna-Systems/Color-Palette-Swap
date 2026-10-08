@@ -12,7 +12,7 @@ from palettes import PALETTES
 from sidebar import inject_sidebar_theme, render_palette_sidebar
 
 st.set_page_config(
-    page_title="Ketsu — diabetes",
+    page_title="Minna Palette",
     page_icon="🩸",
     layout="wide",
     initial_sidebar_state="expanded",
