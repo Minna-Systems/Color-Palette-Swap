@@ -2,8 +2,6 @@ from __future__ import annotations
 
 import streamlit as st
 
-from theme import palette_color_groups
-
 
 def inject_sidebar_theme() -> None:
     st.markdown(
@@ -21,12 +19,19 @@ def inject_sidebar_theme() -> None:
     )
 
 
-def render_palette_sidebar(palette: dict) -> None:
-    primary, accent = palette_color_groups(palette)
+_PRIMARY_ROLES = ("Logo and Sign up", "Start playing", "Headlines")
+_ACCENT_ROLES = ("Coins", "Streak", "Time in range", "This week")
+
+
+def render_palette_sidebar(primary: list[dict], accent: list[dict], shuffled: bool) -> None:
     st.subheader("Primary")
-    for item in primary:
-        st.write(f"`{item['hex']}` · {item['name']}")
+    for role, item in zip(_PRIMARY_ROLES, primary):
+        st.write(f"{role}")
+        st.caption(f"{item['name']} · {item['hex']}")
     st.subheader("Accent")
-    for item in accent:
-        st.write(f"`{item['hex']}` · {item['name']}")
-    st.caption("Primary: logo, buttons, headlines, alerts. Accent: the stats inside the day card.")
+    for i, item in enumerate(accent):
+        role = _ACCENT_ROLES[i] if i < len(_ACCENT_ROLES) else f"Stat {i + 1}"
+        st.write(role)
+        st.caption(f"{item['name']} · {item['hex']}")
+    if shuffled:
+        st.caption("Roles are shuffled. Reset returns the palette defaults.")

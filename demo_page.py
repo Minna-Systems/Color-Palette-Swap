@@ -209,6 +209,12 @@ footer.foot strong {{ color: {p1}; }}
 </div>"""
 
 
-def render_palette_demo(palette: dict) -> None:
-    primary, accent, neutrals = page_swatches(palette)
+def render_palette_demo(
+    palette: dict,
+    primary: list[dict] | None = None,
+    accent: list[dict] | None = None,
+    neutrals: dict[str, str] | None = None,
+) -> None:
+    if primary is None or accent is None or neutrals is None:
+        primary, accent, neutrals = page_swatches(palette)
     st.html(_page_html(primary, accent, neutrals), width="stretch")

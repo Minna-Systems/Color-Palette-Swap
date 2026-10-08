@@ -39,6 +39,17 @@ def flat_palette_colors(palette: dict) -> list[dict]:
     return list(primary) + list(accent)
 
 
+def apply_order(
+    primary: list[dict], accent: list[dict], order: list[int]
+) -> tuple[list[dict], list[dict]]:
+    """Place palette swatches into roles. Index 0–2 are primary roles, the rest accents."""
+    pool = list(primary) + list(accent)
+    if len(order) != len(pool):
+        order = list(range(len(pool)))
+    placed = [pool[i] for i in order]
+    return placed[:3], placed[3:]
+
+
 def page_swatches(palette: dict) -> tuple[list[dict], list[dict], dict[str, str]]:
     """Three primaries and every accent, in palette order. No colors dropped."""
     primary, accent = palette_color_groups(palette)
