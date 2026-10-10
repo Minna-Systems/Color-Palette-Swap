@@ -149,7 +149,7 @@ footer.foot strong {{ color: {p1}; }}
 <div class="site">
 <header class="nav">
   <div class="wide">
-    <p class="logo">ketsu</p>
+    <p class="logo">minna</p>
     <nav aria-label="Main">
       <ul>
         <li><a href="#" aria-current="page">Home</a></li>
@@ -166,7 +166,7 @@ footer.foot strong {{ color: {p1}; }}
     <div>
       <p class="eyebrow">Type 1, for kids and parents</p>
       <h1>Growing up with diabetes just got a little easier</h1>
-      <p class="lede">Ketsu connects to a CGM and turns the day into something a child can follow: what changed, what to do next, and why it mattered.</p>
+      <p class="lede">Minna connects to a CGM and turns the day into something a child can follow: what changed, what to do next, and why it mattered.</p>
       <div class="cta">
         <button type="button" class="btn btn-primary">Start playing</button>
         <button type="button" class="btn btn-secondary">Meet the team</button>
@@ -185,7 +185,7 @@ footer.foot strong {{ color: {p1}; }}
     <h2>How a day actually works</h2>
     <p class="sub">Connect a CGM, see the day clearly, and give your child a reason to check back tomorrow.</p>
     <div class="steps">
-      <article class="step"><b>1</b><h3>See the trend</h3><p>A reading without the last hour is just a number. Ketsu shows where it is headed.</p></article>
+      <article class="step"><b>1</b><h3>See the trend</h3><p>A reading without the last hour is just a number. Minna shows where it is headed.</p></article>
       <article class="step"><b>2</b><h3>Know what to do</h3><p>Short guidance for meals, activity, and sleep. Dosing stays with your care team.</p></article>
       <article class="step"><b>3</b><h3>Keep showing up</h3><p>Check-ins earn progress. The goal is a habit, not a perfect graph.</p></article>
     </div>
@@ -202,7 +202,7 @@ footer.foot strong {{ color: {p1}; }}
   </section>
 
   <footer class="foot">
-    <p><strong>ketsu</strong> · helping kids understand glucose</p>
+    <p><strong>minna</strong> · helping kids understand glucose</p>
     <p><a href="#">Privacy</a><a href="#">Support</a></p>
   </footer>
 </main>

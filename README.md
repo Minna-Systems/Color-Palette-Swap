@@ -1,6 +1,6 @@
 # Color-Palette-Swap
 
-Streamlit page for comparing Ketsu color palettes.
+Streamlit page for comparing Minna color palettes.
 
 **Entry point:** `app.py`
 
